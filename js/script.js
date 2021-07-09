@@ -1,4 +1,4 @@
-let current = new Date();
+/*let current = new Date();
 const button = document.querySelector('.button');
 
 const timeEl = document.getElementById('time');
@@ -8,7 +8,7 @@ const dateDiv = document.querySelector('.location .date');
 const currentTemperatureDiv = document.querySelector('.current .temperature');
 const descriptionDiv = document.querySelector('.current .weather');
 const averageDiv = document.querySelector('.min-max');
-const inputValue = document.querySelector('.inputValue');
+const inputValue = document.querySelector('.inputValue').value;
 const weatherIcon = document.querySelector('.weather-icon');
 
 const dateDayOne = document.querySelector('.location-one .date-one');
@@ -40,7 +40,7 @@ const dateDayFive = document.querySelector('.location-five .date-five');
 const dayFiveTemperatureDiv = document.querySelector('.current-five .temperature-five')
 const weatherDayFive = document.querySelector('.current-five .weather-five');
 const minMaxDayFive = document.querySelector('.min-max-five');
-const weatherIconDayFive = document.querySelector('.weather-icon-five');
+const weatherIconDayFive = document.querySelector('.weather-icon-five');*/
 
 clickButton = () => {
     
@@ -48,14 +48,14 @@ clickButton = () => {
         fetch(`https://api.openweathermap.org/data/2.5/forecast?&units=metric&q=${inputValue.value}&appid=ba4146bd03d9855da2254b9e254e92ad`)
         .then(weather => weather.json())
         .then (data => {
-            displayResults(data)
+            //displayResults(data)
     })
         .catch(err => console.log(err)) 
     })
 };
 clickButton()
 
-function displayResults (weather) {
+/*function displayResults (weather) {
     cityDiv.innerText = `${weather.city.name}, ${weather.city.country}`;
     dateDiv.innerText = setDate(current);
     currentTemperatureDiv.innerHTML = `${Math.round(weather.list[0].main.temp)}<span> ° C</span>`;
@@ -120,4 +120,4 @@ function setDate(d){
         return `${day} ${date} ${month}`
     }
     console.log(months);
-}
+}*/
