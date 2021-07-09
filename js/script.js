@@ -43,11 +43,11 @@ const minMaxDayFive = document.querySelector('.min-max-five');
 const weatherIconDayFive = document.querySelector('.weather-icon-five');*/
 
 
-clickButton = () => {
+weather = () => {
     
     document.getElementById("run").addEventListener("click", function() {
         let inputValue = document.querySelector('.inputValue');
-        
+
         fetch(`https://api.openweathermap.org/data/2.5/forecast?&units=metric&q=${inputValue.value}&appid=ba4146bd03d9855da2254b9e254e92ad`)
         .then(weather => weather.json())
         .then (data => {
@@ -57,7 +57,7 @@ clickButton = () => {
         .catch(err => console.log(err)) 
     })
 };
-clickButton()
+weather()
 
 /*function displayResults (weather) {
     cityDiv.innerText = `${weather.city.name}, ${weather.city.country}`;
