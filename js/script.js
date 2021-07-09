@@ -56,7 +56,9 @@ weather = () => {
             //let dates = [] // To avoid changing the OG date 
             for (let i = 0; i < lengthData; i++){
                 let dateTon = data.list[i].dt;
-                console.log(dateTon)
+                //console.log(dateTon)
+                let newDate = new Date(dateTon*1000);
+                console.log(newDate)
             }
 
             console.log(lengthData)
