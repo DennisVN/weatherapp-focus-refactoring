@@ -57,15 +57,17 @@ weather = () => {
             for (let i = 0; i < lengthData; i++){
                 let dateTon = data.list[i].dt;
                 //console.log(dateTon)
-                let newDate = new Date(dateTon*1000);
-                console.log(newDate)
+                let newDate = new Date(dateTon*1000); // CEST, convert to UTC
+                //console.log(newDate)
+                let day = newDate.getUTCDate();
+                console.log(day);
             }
 
             console.log(lengthData)
             //console.log(cityName);
             //console.log(`${inputValue.value}`);
             console.log ([data])
-            displayResults(data)
+            //displayResults(data)
     })
         .catch(err => console.log(err)) 
     })
