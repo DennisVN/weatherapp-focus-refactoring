@@ -53,6 +53,7 @@ weather = () => {
         .then (data => {
             let cityName = data.city.name;
             let lengthData = data.list.length;
+            let dates = [] // To avoid changing the OG date 
 
             console.log(lengthData)
             console.log(cityName);
