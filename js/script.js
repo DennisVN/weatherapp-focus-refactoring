@@ -8,7 +8,7 @@ const dateDiv = document.querySelector('.location .date');
 const currentTemperatureDiv = document.querySelector('.current .temperature');
 const descriptionDiv = document.querySelector('.current .weather');
 const averageDiv = document.querySelector('.min-max');
-const inputValue = document.querySelector('.inputValue').value;
+const inputValue = document.querySelector('.inputValue');
 const weatherIcon = document.querySelector('.weather-icon');
 
 const dateDayOne = document.querySelector('.location-one .date-one');
@@ -42,12 +42,16 @@ const weatherDayFive = document.querySelector('.current-five .weather-five');
 const minMaxDayFive = document.querySelector('.min-max-five');
 const weatherIconDayFive = document.querySelector('.weather-icon-five');*/
 
+
 clickButton = () => {
     
     document.getElementById("run").addEventListener("click", function() {
+        let inputValue = document.querySelector('.inputValue');
+        
         fetch(`https://api.openweathermap.org/data/2.5/forecast?&units=metric&q=${inputValue.value}&appid=ba4146bd03d9855da2254b9e254e92ad`)
         .then(weather => weather.json())
         .then (data => {
+            console.log(`${inputValue.value}`);
             //displayResults(data)
     })
         .catch(err => console.log(err)) 
