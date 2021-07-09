@@ -51,6 +51,8 @@ weather = () => {
         fetch(`https://api.openweathermap.org/data/2.5/forecast?&units=metric&q=${inputValue.value}&appid=ba4146bd03d9855da2254b9e254e92ad`)
         .then(response => response.json())
         .then (data => {
+            let cityName = data.city.name;
+            console.log(cityName);
             console.log(`${inputValue.value}`);
             console.log ([data])
             //displayResults(data)
