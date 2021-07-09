@@ -52,6 +52,9 @@ weather = () => {
         .then(response => response.json())
         .then (data => {
             let cityName = data.city.name;
+            let lengthData = data.list.length;
+
+            console.log(lengthData)
             console.log(cityName);
             console.log(`${inputValue.value}`);
             console.log ([data])
