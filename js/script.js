@@ -53,12 +53,15 @@ weather = () => {
         .then (data => {
             let cityName = data.city.name;
             let lengthData = data.list.length;
-            let dates = [] // To avoid changing the OG date 
+            //let dates = [] // To avoid changing the OG date 
+            for (let i = 0; i < lengthData; i++){
+                
+            }
 
-            console.log(lengthData)
-            console.log(cityName);
-            console.log(`${inputValue.value}`);
-            console.log ([data])
+            //console.log(lengthData)
+            //console.log(cityName);
+            //console.log(`${inputValue.value}`);
+            //console.log ([data])
             //displayResults(data)
     })
         .catch(err => console.log(err)) 
